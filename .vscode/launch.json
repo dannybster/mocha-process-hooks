@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/index.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "sourceMaps": false,
+            "outDir": null
+        },
+        {
+            "name": "Tests",
+            "type": "node",
+            "args": [
+                "${workspaceRoot}/tests/",
+                "--recursive"
+            ],
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "cwd": "${workspaceRoot}",
+            "request": "launch",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "PROGRAM": "mongod",
+                "PROGRAM_ARGUMENTS": "--port 27018",
+                "SUCCESS_OUTPUT": "waiting for connections on port",
+                "ERROR_OUTPUT": "exception",
+                "LOG_LEVEL": "20",
+                "PROGRAM_TIMEOUT": "10000"
+            }
+        }
+    ]
+}
