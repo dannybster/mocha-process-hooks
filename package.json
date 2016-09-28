@@ -1,12 +1,12 @@
 {
   "name": "mocha-process-hooks",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A set of before and after hooks for running processes in a mocha test/spec environment.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha ./tests/ --recursive"
   },
-  "engines" : {
+  "engines": {
     "node": "6.5.0"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "should": "^11.1.0"
   },
   "devDependencies": {
-    "ps-node": "^0.1.2"
+    "ps-node": "^0.1.2",
+    "should": "^11.1.0"
   }
 }

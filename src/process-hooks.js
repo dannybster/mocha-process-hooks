@@ -17,6 +17,7 @@ const processManager = (programOptions) => {
         this.timeout(programOptions.timeout || 2000);
         should.not.exist(program);
 
+        debugLog(`Starting process ${programOptions.command} ${programOptions.args.join(' ')}`);
         program = spawn(programOptions.command, programOptions.args);
 
         let consoleOut = '';
@@ -46,6 +47,7 @@ const processManager = (programOptions) => {
     }
 
     return {
+        debugLog,
         startProcess,
         killProcess,
         start: function startProcessBefore() {
